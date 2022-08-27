@@ -10,9 +10,9 @@ const { register, login, logout, verifyEmail,
 
 router.post('/register', register);
 router.post('/login', login);
-router.route('/verify-email', verifyEmail)
-router.route('/forgot-Password', forgotPassword)
-router.route('/reset-password', resetPassword)
-router.get('/logout', authenticateUser, logout);
+router.get('/verify-email', verifyEmail)
+router.post('/forgot-Password', forgotPassword)
+router.post('/reset-password', resetPassword)
+router.delete('/logout', authenticateUser, logout);
 
 module.exports = router;
